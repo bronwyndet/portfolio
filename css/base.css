@@ -2,7 +2,13 @@
 
 body {
   width: 100%;
+  color: green;
 }
+
+.template {
+  display: none;
+}
+
 
 
 
