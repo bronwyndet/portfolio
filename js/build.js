@@ -13,7 +13,7 @@ Job.prototype.toHtml = function() {
   var $newJob = $('.template').clone();
   $newJob.find('h3').text(this.company);
   $newJob.find('h4').text(this.role);
-  // $newJob.find('h4 span').text(this.dates);
+  $newJob.find('#dates').text(this.dates);
   $newJob.find('p').text(this.writeup);
 
   $newJob.removeClass('template');

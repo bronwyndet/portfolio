@@ -18,11 +18,5 @@ var expEntries = [
     role:       'Marketing Coordinator',
     dates:      '2005 - 2006',
     writeup:  'Marketing Coordinator developing proposals and marketing material for an engingeering and environmental sciences firm.'
-  },
-  {
-    company:    'Blah Blah',
-    role:       'Job job',
-    dates:      '2005 - 2006',
-    writeup:  'Did stuff.'
   }
 ];
