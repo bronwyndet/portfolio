@@ -7,18 +7,29 @@ body {
 }
 
 header {
-  margin: 10px 10px 0 10px;
   background-color: lightgreen;
+  padding-bottom: 15px;
+  border-bottom: 2px solid white;
+}
+
+header section {
+  padding: 10px;
+}
+
+header nav {
+  margin: 0 10px 0 10px;
 }
 
 main {
-  margin: 0 10px 0 10px;
+  margin: 10px;
+  background-color:
 }
 
 h1 {
   font-size: 1.5em;
   font-weight: bold;
   color: green;
+  line-height: 1.1em;
 }
 
 h2 {
@@ -33,10 +44,23 @@ h3 {
 
 a {
   text-decoration: none;
+  color: white;
+}
+
+em {
+  font-weight: bold;
 }
 
 .template {
   display: none;
+}
+
+#navigation li {
+  display: inline-block;
+  background-color: green;
+  border: 1px solid white;
+  border-radius: 5px;
+  padding: 5px;
 }
 
 
