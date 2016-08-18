@@ -2,9 +2,42 @@
 
 body {
   width: 100%;
+  font-family: sans-serif;
+  line-height: 1.2em;
 }
 
+header {
+  margin: 10px 10px 0 10px;
+  background-color: lightgreen;
+}
 
+main {
+  margin: 0 10px 0 10px;
+}
+
+h1 {
+  font-size: 1.5em;
+  font-weight: bold;
+  color: green;
+}
+
+h2 {
+  font-size: 1.2em;
+  font-weight: bold;
+}
+
+h3 {
+  font-weight: bold;
+  color: green;
+}
+
+a {
+  text-decoration: none;
+}
+
+.template {
+  display: none;
+}
 
 
 /*media queries: using mobile-first RWD principles, adjusting style as viewport increases*/

@@ -4,16 +4,16 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Bronwyn Detlofsen: Web Developer</title>
-    <link ref="stylesheet" type="css/text" href="css/reset.css">
-    <link ref="stylesheet" type="css/text" href="css/base.css">
-    <link ref="stylesheet" type="css/text" href="css/layout.css">
-    <link ref="stylesheet" type="css/text" href="css/module.css">
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/base.css">
+    <link rel="stylesheet" href="css/module.css">
+    <link rel="stylesheet" href="css/layout.css">
   </head>
 
   <body>
     <header>
       <section>
-        <h1>Brownyn Detlofsen</h1>
+        <h1>Bronwyn Detlofsen</h1>
         <h5>Web Developer</h5>
       </section>
       <nav>
@@ -37,9 +37,14 @@
         <h2>Projects</h2>
       </div>
 
-      <div>
+      <section id="experience">
         <h2>Experience</h2>
-      </div>
+          <article class="template" data-item="itemExp">
+            <h3>Company</h3>
+            <h4>Role</h4><span id="dates">Dates</span>
+            <p>Description</p>
+          </article>
+      </section>
 
       <div>
         <h2>Interests / Activities</h2>
@@ -52,6 +57,9 @@
 
     </main>
 
+    <script src="https://code.jquery.com/jquery-3.1.0.slim.min.js" integrity="sha256-cRpWjoSOw5KcyIOaZNo4i6fZ9tKPhYYb6i5T9RSVJG8="   crossorigin="anonymous"></script>
+    <script src="js/source.js"></script>
+    <script src="js/build.js"></script>
     <script src="js/app.js"></script>
   </body>
 </html>
