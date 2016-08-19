@@ -1,9 +1,11 @@
 /*mobile-first, RWD principles: base styles suitable for mobile-device under 320px-wide*/
 
+
 body {
   width: 100%;
-  font-family: sans-serif;
-  line-height: 1.2em;
+  font-family: 'Open Sans Condensed', sans-serif;
+  font-size: 1.25em;
+  line-height: 1.5em;
   background-color: lightgrey;
 }
 
@@ -34,15 +36,18 @@ h1 {
   font-weight: bold;
   color: lightgreen;
   line-height: 1.1em;
+  letter-spacing: .25em;
 }
 
 h2 {
+  font-family: 'Cinzel', serif;
   font-size: 1.2em;
   font-weight: bold;
   margin-bottom: 10px;
 }
 
 h3 {
+  font-family: 'Cinzel', serif;
   font-weight: bold;
   color: green;
   padding-top: 10px;
@@ -50,6 +55,8 @@ h3 {
 
 h5  {
   color: white;
+  letter-spacing: .15em;
+  padding-top: 5px;
 }
 
 a {
@@ -85,7 +92,7 @@ em {
 
 #navigation li {
   display: inline-block;
-  padding: 5px;
+  padding: 2px 10px 2px 10px;
 }
 
 
@@ -100,12 +107,12 @@ em {
 @media only screen and (min-width: 640px) {
 
   header div {
-    width: 70%;
+    width: 60%;
     margin: 0 auto;
   }
 
   main {
-    width: 70%;
+    width: 60%;
     margin: 0 auto;
   }
 
