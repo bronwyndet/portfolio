@@ -1,6 +1,7 @@
 'use strict';
 
 var entries = [];
+var projWriteup = [];
 
 function Job (options) {
   this.company = options.company;
@@ -27,5 +28,26 @@ expEntries.forEach(function(options) {
 
 entries.forEach(function(currentEntry) {
   $('#experience').append(currentEntry.toHtml());
-  console.log(currentEntry);
+});
+
+
+
+function ProjectEntry (opts) {
+  this.projName = opts.projName;
+  this.projSkills = opts.projSkills;
+  this.projDesc = opts.projDesc;
+}
+
+ProjectEntry.prototype.toHtml = function() {
+  var source = $('#project-template').html();
+  var templateRender = Handlebars.compile(source);
+  return templateRender(this);
+};
+
+projEntries.forEach(function(opts) {
+  projWriteup.push(new ProjectEntry(opts));
+});
+
+projWriteup.forEach(function(projObject) {
+  $('#projblurb').append(projObject.toHtml());
 });

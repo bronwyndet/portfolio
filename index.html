@@ -36,10 +36,16 @@
 
       <section class="category" id="projects">
         <h2>Projects</h2>
-          <h3>Totally Rad Hangman</h3>
-              <ul>
-                <li>Web-based hangman game written entirely in vanilla <em>JavaScript</em> and using <em>HTML</em> and <em>CSS</em>.</li>
-      </section>
+          <script id="project-template" type="text/x-handlebars-template">
+            <article id="projblurb">
+              <h3>{{projName}}</h3>
+              <h4>Skills involved: {{projSkills}}</h4>
+                <ul>
+                  <li>{{{projDesc}}}</li>
+                </ul>
+            </article>
+          </script>
+        </section>
 
       <section class="category" id="experience">
         <h2>Experience</h2>
@@ -62,6 +68,7 @@
     </main>
 
     <script src="https://code.jquery.com/jquery-3.1.0.slim.min.js" integrity="sha256-cRpWjoSOw5KcyIOaZNo4i6fZ9tKPhYYb6i5T9RSVJG8=" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.0.4/handlebars.js"></script>
     <script src="js/source.js"></script>
     <script src="js/build.js"></script>
     <script src="js/app.js"></script>

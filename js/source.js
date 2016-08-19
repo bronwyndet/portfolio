@@ -20,3 +20,17 @@ var expEntries = [
     writeup:  'Marketing Coordinator developing proposals and marketing material for an engingeering and environmental sciences firm.'
   }
 ];
+
+
+var projEntries = [
+  {
+    projName:        'Totally Rad Hangman',
+    projSkills:       'JavaScript, HTML, CSS, JSON',
+    projDesc:  '<p>Created a web-based Hangman game using vanilla <em>JavaScript</em> for all functionality, used <em>JSON</em> and local storage for high scores persistence on local machine, and <em>HTML</em> and <em>CSS</em> for structure and styling. Chose an arcade/retro visual theme and maintained the design aesthetic throughout the game.</p>'
+  },
+  {
+    projName:        'BusMall',
+    projSkills:       'JavaScript, JSON, HTML, CSS, Chart.js',
+    projDesc:  '<p>Created a survey page to collect data on product interest using vanilla <em>JavaScript</em>. Designed a click-based survey based on a selection of images and tracked the data for presentation in bar graph form. Used JSON to persist the survey data on a local machine for cumulative scoring of product interest. Made use of event listeners, event handlers, JSON, and Chart.js'
+  }
+];
