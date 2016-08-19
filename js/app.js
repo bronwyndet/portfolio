@@ -2,8 +2,10 @@
 
 var navView = {};
 
+// CLEARING PAGE OF CONTENT EXCEPT SKILLS (EQUATE TO HOME)
 $('.category').not('#skills').hide();
 
+// SINGLE-PAGE NAVIGATION FUNCTION USING JQUERY
 navView.navigate = function() {
   $('.nav').on('click', function() {
     $('.category').hide();
@@ -28,8 +30,7 @@ navView.navigate = function() {
   $('.nav[data-category="profile"]').on('click', function() {
     $('#profile').show();
   });
-
 };
 
-
+// CALLING SINGLE-PAGE NAVIGATION FUNCTION
 navView.navigate();

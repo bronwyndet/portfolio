@@ -36,6 +36,6 @@ var projEntries = [
   {
     projName:       'Portfolio',
     projSkills:     'jQuery, Handlebars, JavaScript, HTML, CSS',
-    projDesc:       '<p>Developed a single-page portfolio site using jQuery and Handlebars for templating projects and experience, using mobile-first and responsive design principles in HTML and CSS.</p>'    
+    projDesc:       '<p>Developed a single-page portfolio site using jQuery and Handlebars for templating projects and experience, using mobile-first and responsive design principles in HTML and CSS.</p>'
   }
 ];
