@@ -36,12 +36,15 @@ function ProjectEntry (opts) {
   this.projName = opts.projName;
   this.projSkills = opts.projSkills;
   this.projDesc = opts.projDesc;
+
 }
 
 ProjectEntry.prototype.toHtml = function() {
   var source = $('#project-template').html();
   var templateRender = Handlebars.compile(source);
+  console.log(this);
   return templateRender(this);
+
 };
 
 projEntries.forEach(function(opts) {

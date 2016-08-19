@@ -12,38 +12,40 @@
 
   <body>
     <header>
-      <section>
-        <h1>Bronwyn Detlofsen</h1>
-        <h5>Web Developer</h5>
-      </section>
-      <nav>
-        <ul id="navigation">
-          <li class="nav" data-category="skills"><a href="#">Skills</a></li>
-          <li class="nav" data-category="projects"><a href="#">Projects</a></li>
-          <li class="nav" data-category="experience"><a href="#">Experience</a></li>
-          <li class="nav" data-category="interests"><a href="#">Interests</a></li>
-          <li class="nav" data-category="profile"><a href="#">Profile</a></li>
-        </ul>
-      </nav>
+      <div>
+        <section>
+          <h1>Bronwyn Detlofsen</h1>
+          <h5>Web Developer</h5>
+        </section>
+        <nav>
+          <ul id="navigation">
+            <a href="#"><li class="nav" data-category="skills">Skills</li></a>
+            <li class="nav" data-category="projects"><a href="#">Projects</a></li>
+            <li class="nav" data-category="experience"><a href="#">Experience</a></li>
+            <li class="nav" data-category="interests"><a href="#">Interests</a></li>
+            <li class="nav" data-category="profile"><a href="#">Profile</a></li>
+          </ul>
+        </nav>
+    </div>
     </header>
 
     <main>
 
       <section class="category" id="skills">
         <h2>Skills</h2>
-          <p>JavaScript, HTML, CSS, jQuery</p>
+          <p>JavaScript, HTML, CSS, jQuery, Handlebars (templating), JSON</p>
       </section>
 
       <section class="category" id="projects">
         <h2>Projects</h2>
+        <article id="projblurb">
+        </article>
           <script id="project-template" type="text/x-handlebars-template">
-            <article id="projblurb">
               <h3>{{projName}}</h3>
-              <h4>Skills involved: {{projSkills}}</h4>
+              <h4><em>Skills involved:</em> {{projSkills}}</h4>
                 <ul>
                   <li>{{{projDesc}}}</li>
                 </ul>
-            </article>
           </script>
         </section>
 

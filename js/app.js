@@ -2,6 +2,8 @@
 
 var navView = {};
 
+$('.category').not('#skills').hide();
+
 navView.navigate = function() {
   $('.nav').on('click', function() {
     $('.category').hide();
