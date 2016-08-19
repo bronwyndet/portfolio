@@ -32,5 +32,10 @@ var projEntries = [
     projName:        'BusMall',
     projSkills:       'JavaScript, JSON, HTML, CSS, Chart.js',
     projDesc:  '<p>Created a survey page to collect data on product interest using vanilla <em>JavaScript</em>. Designed a click-based survey based on a selection of images and tracked the data for presentation in bar graph form. Used JSON to persist the survey data on a local machine for cumulative scoring of product interest. Made use of event listeners, event handlers, JSON, and Chart.js.</p>'
+  },
+  {
+    projName:       'Portfolio',
+    projSkills:     'jQuery, Handlebars, JavaScript, HTML, CSS',
+    projDesc:       '<p>Developed a single-page portfolio site using jQuery and Handlebars for templating projects and experience, using mobile-first and responsive design principles in HTML and CSS.</p>'    
   }
 ];
