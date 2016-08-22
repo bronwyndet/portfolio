@@ -2,49 +2,68 @@
 
 body {
   width: 100%;
-  font-family: sans-serif;
-  line-height: 1.2em;
+  font-family: 'Open Sans Condensed', sans-serif;
+  font-size: 1.25em;
+  line-height: 1.5em;
+  background-color: lightgrey;
 }
 
 header {
-  background-color: lightgreen;
+  background-color: black;
   padding-bottom: 15px;
   border-bottom: 2px solid white;
 }
 
 header section {
-  padding: 10px;
+  padding-bottom: 10px;
+  padding-top: 10px;
+  padding-left: 10px;
 }
 
 header nav {
   margin: 0 10px 0 10px;
 }
 
-main {
-  margin: 10px;
-  background-color:
+main section {
+  padding-top: 20px;
+  padding-left: 10px;
 }
 
 h1 {
   font-size: 1.5em;
   font-weight: bold;
-  color: green;
+  color: lightgreen;
   line-height: 1.1em;
+  letter-spacing: .25em;
 }
 
 h2 {
+  font-family: 'Cinzel', serif;
   font-size: 1.2em;
   font-weight: bold;
+  margin-bottom: 10px;
 }
 
 h3 {
+  font-family: 'Cinzel', serif;
   font-weight: bold;
   color: green;
+  padding-top: 10px;
+}
+
+h5  {
+  color: white;
+  letter-spacing: .15em;
+  padding-top: 5px;
 }
 
 a {
   text-decoration: none;
   color: white;
+}
+
+p {
+  margin-bottom: 5px;
 }
 
 em {
@@ -55,12 +74,24 @@ em {
   display: none;
 }
 
+.nav {
+  /*background-color: lightgrey;*/
+  border-left: 1px solid white;
+}
+
+.nav:hover {
+  background-color: grey;
+}
+
+.nav:active {
+  background-color: black;
+}
+
 #navigation li {
+  line-height: .9em;
+  font-size: .8em;
   display: inline-block;
-  background-color: green;
-  border: 1px solid white;
-  border-radius: 5px;
-  padding: 5px;
+  padding: 1px 6px 1px 6px;
 }
 
 
@@ -68,12 +99,43 @@ em {
 
 @media only screen and (min-width: 320px) {
 
-
-
 }
 
-@media only screen and (min-width: 640px) {
+@media only screen and (min-width: 675px) {
 
+  header div {
+    width: 60%;
+    margin: 0 auto;
+  }
 
+  main {
+    width: 60%;
+    margin: 0 auto;
+  }
+
+  .nav {
+    background-color: green;
+    border-left: 1px solid white;
+    border-right: 1px solid white;
+  }
+
+  .nav:hover {
+    background-color: grey;
+  }
+
+  .nav:active {
+    background-color: black;
+  }
+
+  #navigation li {
+    display: inline-block;
+    font-size: 1em;
+    line-height: 1.2em;
+    padding: 2px 10px 2px 10px;
+  }
+
+  #lastli {
+    /*border-right: 1px solid white;*/
+  }
 
 }

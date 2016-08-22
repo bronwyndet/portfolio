@@ -1,7 +1,9 @@
 'use strict';
 
 var entries = [];
+var projWriteup = [];
 
+// CONSTRUCTOR FUNCTION FOR JOB EXPERIENCE OBJECTS TO BE USED FOR RENDING WITH JQUERY TO HTML PAGE
 function Job (options) {
   this.company = options.company;
   this.role = options.role;
@@ -9,6 +11,7 @@ function Job (options) {
   this.writeup = options.writeup;
 };
 
+// RENDERING JOB EXP OBJECTS WITH JQUERY TO HTML TEMPLATE
 Job.prototype.toHtml = function() {
   var $newJob = $('.template').clone();
   $newJob.find('h3').text(this.company);
@@ -21,11 +24,36 @@ Job.prototype.toHtml = function() {
   return $newJob;
 };
 
+// INSTANTIATING JOB EXP OBJECTS FROM SOURCE.JS AND PUSHING INTO ARRAY
 expEntries.forEach(function(options) {
   entries.push(new Job(options));
 });
 
+// APPENDING JQUERY OBJECTS TO HTML PAGE
 entries.forEach(function(currentEntry) {
   $('#experience').append(currentEntry.toHtml());
-  console.log(currentEntry);
+});
+
+// CONSTRUCTOR FUNCTION FOR PROJECTS
+function ProjectEntry (opts) {
+  this.projName = opts.projName;
+  this.projSkills = opts.projSkills;
+  this.projDesc = opts.projDesc;
+};
+
+// COMPILING PROJECT OBJECTS WITH HANDLEBARS
+ProjectEntry.prototype.toHtml = function() {
+  var source = $('#project-template').html();
+  var templateRender = Handlebars.compile(source);
+  return templateRender(this);
+};
+
+// INSTANTIATING PROJECT OBJECTS AND PUSHING INTO ARRAY
+projEntries.forEach(function(opts) {
+  projWriteup.push(new ProjectEntry(opts));
+});
+
+// APPENDING PROJECTS TO HTML PAGE
+projWriteup.forEach(function(projObject) {
+  $('#projblurb').append(projObject.toHtml());
 });
