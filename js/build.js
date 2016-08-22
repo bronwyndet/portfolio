@@ -2,6 +2,7 @@
 
 var entries = [];
 var projWriteup = [];
+ProjectEntry.allEntries = [];
 
 // CONSTRUCTOR FUNCTION FOR JOB EXPERIENCE OBJECTS TO BE USED FOR RENDING WITH JQUERY TO HTML PAGE
 function Job (options) {
@@ -48,12 +49,28 @@ ProjectEntry.prototype.toHtml = function() {
   return templateRender(this);
 };
 
-// INSTANTIATING PROJECT OBJECTS AND PUSHING INTO ARRAY
-projEntries.forEach(function(opts) {
-  projWriteup.push(new ProjectEntry(opts));
-});
 
-// APPENDING PROJECTS TO HTML PAGE
-projWriteup.forEach(function(projObject) {
-  $('#projblurb').append(projObject.toHtml());
-});
+ProjectEntry.retrieveAll = function(data) {
+  if (localStorage.writeUps) {
+    projEntries.renderToIndex(JSON.parse(localStorage.writeUps));
+  } else {
+    $.getJSON('data/projects.json', function(data, status, XHR) {
+      
+    };
+  };
+
+};
+
+
+
+projEntries.renderToIndex = function(){
+  // INSTANTIATING PROJECT OBJECTS AND PUSHING INTO ARRAY
+  projEntries.forEach(function(opts) {
+    projWriteup.push(new ProjectEntry(opts));
+  });
+
+  // APPENDING PROJECTS TO HTML PAGE
+  projWriteup.forEach(function(projObject) {
+    $('#projblurb').append(projObject.toHtml());
+  });
+};
