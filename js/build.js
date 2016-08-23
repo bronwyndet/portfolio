@@ -55,13 +55,12 @@ ProjectEntry.retrieveAll = function(data) {
     projEntries.loadAll(JSON.parse(localStorage.writeUps));
     projEntries.renderToIndex();
   } else {
-    $.getJSON('data/projects.json', function(data, status, XHR) {
+    $.getJSON('data/projects.json', function(data, status, XHR){
       localStorage.writeUps = JSON.stringify(data);
       projEntries.loadAll(data);
       projEntries.renderToIndex();
     });
   };
-
 };
 
 
