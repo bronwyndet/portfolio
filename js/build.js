@@ -52,27 +52,27 @@ ProjectEntry.prototype.toHtml = function() {
 
 ProjectEntry.retrieveAll = function(data) {
   if (localStorage.writeUps) {
-    projEntries.loadAll(JSON.parse(localStorage.writeUps));
-    projEntries.renderToIndex();
+    ProjectEntry.loadAll(JSON.parse(localStorage.writeUps));
+    ProjectEntry.renderToIndex();
   } else {
     $.getJSON('data/projects.json', function(data, status, XHR){
       localStorage.writeUps = JSON.stringify(data);
-      projEntries.loadAll(data);
-      projEntries.renderToIndex();
+      ProjectEntry.loadAll(data);
+      ProjectEntry.renderToIndex();
     });
   };
 };
 
 
 // INSTANTIATING PROJECT OBJECTS AND PUSHING INTO ARRAY
-ProjectEntry.loadAll = function (projEntries) {
-  projEntries.forEach(function(opts){
+ProjectEntry.loadAll = function (inputData) {
+  inputData.forEach(function(opts){
     ProjectEntry.allEntries.push(new ProjectEntry(opts));
   });
 };
 
   // APPENDING PROJECTS TO HTML PAGE
-projEntries.renderToIndex = function() {
+ProjectEntry.renderToIndex = function() {
   ProjectEntry.allEntries.forEach(function(projObject) {
     $('#projblurb').append(projObject.toHtml());
   });
