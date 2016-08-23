@@ -52,25 +52,29 @@ ProjectEntry.prototype.toHtml = function() {
 
 ProjectEntry.retrieveAll = function(data) {
   if (localStorage.writeUps) {
-    projEntries.renderToIndex(JSON.parse(localStorage.writeUps));
+    projEntries.loadAll(JSON.parse(localStorage.writeUps));
+    projEntries.renderToIndex();
   } else {
     $.getJSON('data/projects.json', function(data, status, XHR) {
-      
-    };
+      localStorage.writeUps = JSON.stringify(data);
+      projEntries.loadAll(data);
+      projEntries.renderToIndex();
+    });
   };
 
 };
 
 
-
-projEntries.renderToIndex = function(){
-  // INSTANTIATING PROJECT OBJECTS AND PUSHING INTO ARRAY
-  projEntries.forEach(function(opts) {
-    projWriteup.push(new ProjectEntry(opts));
+// INSTANTIATING PROJECT OBJECTS AND PUSHING INTO ARRAY
+ProjectEntry.loadAll = function (projEntries) {
+  projEntries.forEach(function(opts){
+    ProjectEntry.allEntries.push(new ProjectEntry(opts));
   });
+};
 
   // APPENDING PROJECTS TO HTML PAGE
-  projWriteup.forEach(function(projObject) {
+projEntries.renderToIndex = function() {
+  ProjectEntry.allEntries.forEach(function(projObject) {
     $('#projblurb').append(projObject.toHtml());
   });
 };

@@ -1,4 +1,4 @@
-var projEntries = [
+[
   {
     "projName":         "Totally Rad Hangman",
     "projSkills":       "JavaScript, HTML, CSS, JSON",
