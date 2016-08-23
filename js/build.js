@@ -1,7 +1,6 @@
 'use strict';
 
 var entries = [];
-var projWriteup = [];
 ProjectEntry.allEntries = [];
 
 // CONSTRUCTOR FUNCTION FOR JOB EXPERIENCE OBJECTS TO BE USED FOR RENDING WITH JQUERY TO HTML PAGE
@@ -35,6 +34,7 @@ entries.forEach(function(currentEntry) {
   $('#experience').append(currentEntry.toHtml());
 });
 
+
 // CONSTRUCTOR FUNCTION FOR PROJECTS
 function ProjectEntry (opts) {
   this.projName = opts.projName;
@@ -49,7 +49,7 @@ ProjectEntry.prototype.toHtml = function() {
   return templateRender(this);
 };
 
-
+// CHECKING FOR LOCAL STORAGE AND USING IF PRESENT, USING JQUERY/AJAX TO RETRIEVE IF NOT PRESENT (AND THEN SET TO LOCAL STORAGE)
 ProjectEntry.retrieveAll = function(data) {
   if (localStorage.writeUps) {
     ProjectEntry.loadAll(JSON.parse(localStorage.writeUps));
@@ -63,7 +63,6 @@ ProjectEntry.retrieveAll = function(data) {
   };
 };
 
-
 // INSTANTIATING PROJECT OBJECTS AND PUSHING INTO ARRAY
 ProjectEntry.loadAll = function (inputData) {
   inputData.forEach(function(opts){
@@ -71,7 +70,7 @@ ProjectEntry.loadAll = function (inputData) {
   });
 };
 
-  // APPENDING PROJECTS TO HTML PAGE
+// APPENDING PROJECTS FROM ARRAY ONTO HTML PAGE
 ProjectEntry.renderToIndex = function() {
   ProjectEntry.allEntries.forEach(function(projObject) {
     $('#projblurb').append(projObject.toHtml());
