@@ -34,3 +34,4 @@ navView.navigate = function() {
 
 // CALLING SINGLE-PAGE NAVIGATION FUNCTION
 navView.navigate();
+ProjectEntry.retrieveAll();
