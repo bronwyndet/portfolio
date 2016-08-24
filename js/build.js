@@ -63,6 +63,19 @@ ProjectEntry.retrieveAll = function(data) {
   };
 };
 
+
+ProjectEntry.allProjects = function() {
+  return ProjectEntry.uniqueEntries.map(function(data){
+    return data.project;
+  }).reduce(function(acc, cur, index, array) {
+    if (acc.indexOf(cur) === -1){
+      acc.push(cur);
+    };
+    return acc;
+  },[]);
+};
+
+
 // INSTANTIATING PROJECT OBJECTS AND PUSHING INTO ARRAY
 ProjectEntry.loadAll = function (inputData) {
   inputData.forEach(function(opts){
