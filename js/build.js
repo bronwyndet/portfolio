@@ -50,6 +50,7 @@ ProjectEntry.prototype.toHtml = function() {
 };
 
 // CHECKING FOR LOCAL STORAGE AND USING IF PRESENT, USING JQUERY/AJAX TO RETRIEVE IF NOT PRESENT (AND THEN SET TO LOCAL STORAGE)
+// TODO: delete "data parameter per Munir"
 ProjectEntry.retrieveAll = function(data) {
   if (localStorage.writeUps) {
     ProjectEntry.loadAll(JSON.parse(localStorage.writeUps));
@@ -63,7 +64,7 @@ ProjectEntry.retrieveAll = function(data) {
   };
 };
 
-
+//TODO: add functional comment
 ProjectEntry.allProjects = function() {
   return ProjectEntry.uniqueEntries.map(function(data){
     return data.project;

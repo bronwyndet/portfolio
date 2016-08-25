@@ -1,5 +1,7 @@
 /*mobile-first, RWD principles: base styles suitable for mobile-device under 320px-wide*/
 
+/*TODO: separate modular css from base css*/
+
 body {
   width: 100%;
   font-family: 'Open Sans Condensed', sans-serif;
