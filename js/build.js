@@ -35,6 +35,9 @@ entries.forEach(function(currentEntry) {
 });
 
 
+// TODO: 1. add additional projects (for filtering)
+//        2. add filtering for project entries
+
 // CONSTRUCTOR FUNCTION FOR PROJECTS
 function ProjectEntry (opts) {
   this.projName = opts.projName;
@@ -50,7 +53,7 @@ ProjectEntry.prototype.toHtml = function() {
 };
 
 // CHECKING FOR LOCAL STORAGE AND USING IF PRESENT, USING JQUERY/AJAX TO RETRIEVE IF NOT PRESENT (AND THEN SET TO LOCAL STORAGE)
-// TODO: delete "data parameter per Munir"
+// TODO: "delete data parameter per Munir"
 ProjectEntry.retrieveAll = function(data) {
   if (localStorage.writeUps) {
     ProjectEntry.loadAll(JSON.parse(localStorage.writeUps));

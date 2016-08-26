@@ -1,6 +1,7 @@
 /*mobile-first, RWD principles: base styles suitable for mobile-device under 320px-wide*/
 
 /*TODO: separate modular css from base css*/
+/*TODO: add additional mobile-first styling (i.e., to accommodate humburger menu addition)*/
 
 body {
   width: 100%;
