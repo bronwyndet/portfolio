@@ -9,6 +9,13 @@
     <link rel="stylesheet" href="css/base.css">
     <link rel="stylesheet" href="css/module.css">
     <link rel="stylesheet" href="css/layout.css">
+    <script id="project-template" type="text/x-handlebars-template">
+        <h3>{{projName}}</h3>
+        <h4><em>Skills involved:</em> {{projSkills}}</h4>
+          <ul>
+            <li>{{{projDesc}}}</li>
+          </ul>
+    </script>
   </head>
 
   <body>
@@ -43,14 +50,7 @@
         <!-- TODO: add project filtering here -->
         <article id="projblurb">
         </article>
-        <!--TODO: move handlebars script to head  -->
-          <script id="project-template" type="text/x-handlebars-template">
-              <h3>{{projName}}</h3>
-              <h4><em>Skills involved:</em> {{projSkills}}</h4>
-                <ul>
-                  <li>{{{projDesc}}}</li>
-                </ul>
-          </script>
+        <!--TODO: ** DONE ** move handlebars script to head  -->
         </section>
 
       <section class="category" id="experience">
