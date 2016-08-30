@@ -9,7 +9,7 @@
     $('#experience').hide();
     $('#interests').hide();
     $('#profile').hide();
-    console.log('getting to this line?');
+    console.log('huzzah!');
   };
 
   module.skillsController = skillsController;
