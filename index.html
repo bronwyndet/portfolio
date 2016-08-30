@@ -9,6 +9,13 @@
     <link rel="stylesheet" href="css/base.css">
     <link rel="stylesheet" href="css/module.css">
     <link rel="stylesheet" href="css/layout.css">
+    <script id="project-template" type="text/x-handlebars-template">
+        <h3>{{projName}}</h3>
+        <h4><em>Skills involved:</em> {{projSkills}}</h4>
+          <ul>
+            <li>{{{projDesc}}}</li>
+          </ul>
+    </script>
   </head>
 
   <body>
@@ -21,11 +28,11 @@
         <nav>
           <!--TODO: add "hamburger menu" per Munir (already have responsively changing nav, but it must be a hamburger) -->
           <ul id="navigation">
-            <a href="#"><li class="nav" data-category="skills">Skills</li></a>
-            <li class="nav" data-category="projects"><a href="#">Projects</a></li>
-            <li class="nav" data-category="experience"><a href="#">Experience</a></li>
-            <li class="nav" data-category="interests"><a href="#">Interests</a></li>
-            <li class="nav" data-category="profile" id="lastli"><a href="#">Profile</a></li>
+            <li class="nav" data-category="skills"><a href="/">Skills</a></li>
+            <li class="nav" data-category="projects"><a href="/projects">Projects</a></li>
+            <li class="nav" data-category="experience"><a href="/experience">Experience</a></li>
+            <li class="nav" data-category="interests"><a href="/interests">Interests</a></li>
+            <li class="nav" data-category="profile" id="lastli"><a href="/profile">Profile</a></li>
           </ul>
         </nav>
     </div>
@@ -43,15 +50,8 @@
         <!-- TODO: add project filtering here -->
         <article id="projblurb">
         </article>
-        <!--TODO: move handlebars script to head  -->
-          <script id="project-template" type="text/x-handlebars-template">
-              <h3>{{projName}}</h3>
-              <h4><em>Skills involved:</em> {{projSkills}}</h4>
-                <ul>
-                  <li>{{{projDesc}}}</li>
-                </ul>
-          </script>
-        </section>
+        <!--TODO: ** DONE ** move handlebars script to head  -->
+      </section>
 
       <section class="category" id="experience">
         <h2>Experience</h2>
@@ -74,10 +74,20 @@
 
 
     </main>
+
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.0.4/handlebars.js"></script>
+    <script src="page.js"></script>
     <script src="js/source.js"></script>
-    <script src="js/build.js"></script>
+    <script src="js/models/project.js"></script>
+    <script src="js/views/projectView.js"></script>
     <script src="js/app.js"></script>
+    <script src="js/controllers/skillsController.js"></script>
+    <script src="js/controllers/projectsController.js"></script>
+    <script src="js/controllers/experienceController.js"></script>
+    <script src="js/controllers/profileController.js"></script>
+    <script src="js/controllers/interestsController.js"></script>
+    <script src="js/controllers/routes.js"></script>
+
   </body>
 </html>
