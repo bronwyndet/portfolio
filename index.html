@@ -16,6 +16,10 @@
             <li>{{{projDesc}}}</li>
           </ul>
     </script>
+    <script id="skills-template" type="text/x-handlebars-template">
+        <h3>{{name}}</h3>
+        <p>Skills involved: {{languages}}</p>
+    </script>
   </head>
 
   <body>
@@ -43,6 +47,9 @@
       <section class="category" id="skills">
         <h2>Skills</h2>
           <p>JavaScript, HTML, CSS, jQuery, Handlebars, JSON, Ajax, SQL</p>
+        <h3>Skills / Languages (used in Github repos)</h3>
+        <article id="reposkills">
+        </article>
       </section>
 
       <section class="category" id="projects">
