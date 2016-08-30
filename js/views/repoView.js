@@ -4,7 +4,7 @@
   var repoCompiler = Handlebars.compile($('#skills-template').text());
 
   repoView.renderRepos = function() {
-    $('#about ul').empty().append(
+    $('#reposkills').empty().append(
       reposObj.withAttribute('name')
       .map(repoCompiler)
     );
