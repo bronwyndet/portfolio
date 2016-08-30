@@ -55,5 +55,6 @@
   };
 
   module.entries = entries;
+  module.ProjectEntry = ProjectEntry;
 
 })(window);
