@@ -15,5 +15,8 @@
   "bugs": {
     "url": "https://github.com/bronwyndet/portfolio/issues"
   },
-  "homepage": "https://github.com/bronwyndet/portfolio#readme"
+  "homepage": "https://github.com/bronwyndet/portfolio#readme",
+  "dependencies": {
+    "express": "^4.14.0"
+  }
 }
