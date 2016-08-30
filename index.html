@@ -18,7 +18,9 @@
     </script>
     <script id="skills-template" type="text/x-handlebars-template">
         <h3>{{name}}</h3>
-        <p>Skills involved: {{languages}}</p>
+        <p><em>Created on:</em> {{created_at}}</p>
+        <p><em>Primary Language:</em> {{language}}</p>
+        <p><em>Link:</em> <a href="{{html_url}}">{{name}}</a></p>
     </script>
   </head>
 
@@ -47,7 +49,7 @@
       <section class="category" id="skills">
         <h2>Skills</h2>
           <p>JavaScript, HTML, CSS, jQuery, Handlebars, JSON, Ajax, SQL</p>
-        <h3>Skills / Languages (used in Github repos)</h3>
+        <h2 class="addtopspace">GitHub Projects</h2>
         <article id="reposkills">
         </article>
       </section>
@@ -84,6 +86,7 @@
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.0.4/handlebars.js"></script>
+    <script src="githubToken.js"></script>
     <script src="vendors/page.js"></script>
     <script src="js/source.js"></script>
     <script src="js/models/project.js"></script>
