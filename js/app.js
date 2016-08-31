@@ -35,7 +35,6 @@
   // };
   module.ProjectEntry = ProjectEntry;
 
-
 // CALLING SINGLE-PAGE NAVIGATION FUNCTION
   // navView.navigate();
   ProjectEntry.retrieveAll();
