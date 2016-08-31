@@ -11,7 +11,6 @@
       type: 'GET',
       headers: {'Authorization': 'token ' + githubToken},
       success: function(data) {
-        console.log(data);
         reposObj.allRepos = data;
         console.log(reposObj.allRepos);
         callback();
