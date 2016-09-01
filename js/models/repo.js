@@ -4,18 +4,14 @@
   reposObj.allRepos = [];
 
   reposObj.requestRepos = function(callback) {
-    $.ajax({
-      url: 'https://api.github.com/users/bronwyndet/repos' +
+    $.when(
+      $.get('/github.com/users/bronwyndet/repos' +
         '?per_page=5' +
-        '&sort=updated',
-      type: 'GET',
-      headers: {'Authorization': 'token ' + githubToken},
-      success: function(data) {
-        reposObj.allRepos = data;
-        console.log(reposObj.allRepos);
-        callback();
-      }
-    });
+        '&sort=updated')
+        .done(function(data) {
+          reposObj.allRepos = data;
+        })
+    ).done(callback);
   };
 
   reposObj.withAttribute = function(myAttr) {
