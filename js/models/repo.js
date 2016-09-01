@@ -4,11 +4,9 @@
   reposObj.allRepos = [];
 
   reposObj.requestRepos = function(callback) {
-    $.when(
-      $.get('/github.com/users/bronwyndet/repos' +
+    $.when($.get('/github.com/users/bronwyndet/repos' +
         '?per_page=5' +
-        '&sort=updated')
-        .done(function(data) {
+        '&sort=updated').done(function(data) {
           reposObj.allRepos = data;
         })
     ).done(callback);
