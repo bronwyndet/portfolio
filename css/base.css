@@ -97,6 +97,9 @@ em {
   padding: 1px 6px 1px 6px;
 }
 
+.addtopspace {
+  padding-top: 1.25em;
+}
 
 /*media queries: using mobile-first RWD principles, adjusting style as viewport increases*/
 
